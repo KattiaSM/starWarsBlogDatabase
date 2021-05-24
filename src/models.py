@@ -67,8 +67,8 @@ class Users(Base):
     # Here we define columns for the table person
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    name = Column(String(50), nullable=False unique=True)
-    email = Column(String(50), nullable=False unique=True)
+    name = Column(String(50), unique=True, nullable=False)
+    email = Column(String(50), unique=True, nullable=False)
     password = Column(String(10), nullable=False)
 
 class Favorites(Base):
